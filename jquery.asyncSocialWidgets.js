@@ -112,6 +112,10 @@
 	var vkontakte = {
 
 
+		// Инициализировано?
+		init: false,
+
+
 		// likes
 		likesCounter: 0,
 		like: function(els) {
@@ -199,6 +203,8 @@
 					callback();
 					$(this).dequeue('actions');
 				});
+			if (vkontakte.init && api.queue('actions').length)
+				api.dequeue('actions');
 
 			// Подключать API?
 			if (has_script)
@@ -216,6 +222,7 @@
 					apiId: options.vk_app_id,
 					onlyWidgets: true
 				});
+				vkontakte.init = true;
 				api.dequeue('actions');
 			};
 			if (window.VK!==undefined) {
