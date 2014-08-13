@@ -2,46 +2,42 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>asyncSocialWidgets</title>
+	<title>jQuery SemanticWP Social</title>
 
 	<!-- Стили -->
 	<link rel="stylesheet" href="styles.css">
 
 	<!-- jQuery -->
-	<script src="//yandex.st/jquery/1.8.1/jquery.min.js"></script>
+	<script src="http://yandex.st/jquery/2.1.1/jquery.min.js"></script>
 
-	<!-- asyncSocialWidgets -->
-	<script src="jquery.asyncSocialWidgets.js"></script>
+	<!-- jQuery SemanticWP Social -->
+	<script src="jquery-semanticwp-social.js"></script>
 	<script>
 		$(function() {
-			$(function() {
-				$.asyncSocialWidgets('set', {vk_app_id: 2926743});
-				$.asyncSocialWidgets('init');
-			});
+			$.swpsocial('set', {vk_app_id: 2926743});
+			$.swpsocial('init');
 		});
 	</script>
 
 </head>
 <body>
+<a href="http://semanticwp.net/" class="b-semanticwp"></a>
 <div class="l-container">
 
 
 	<!-- Шапка -->
 	<div class="b-header g-line">
-		<div class="title">
-			<div class="g-line">
-				<div class="name">asyncSocialWidgets</div>
-			</div>
-			<div class="slogan">Виджеты социальных сетей с асинхронной загрузкой</div>
-		</div>
+		<div class="title">jQuery SemanticWP Social</div>
+		<div class="slogan">Виджеты социальных сетей с асинхронной загрузкой</div>
 	</div>
 	<!-- Шапка - Конец -->
 
 
 	<!-- Документация -->
 	<h2>Документация</h2>
-	<p>Подробная документация плагина asyncSocialWidgets доступна по адресу:
-		<a href="http://arcticlab.ru/async-social-widgets/">http://arcticlab.ru/async-social-widgets/</a>
+	<p>
+		Подробная документация плагина jQuery SemanticWP Social доступна по адресу:
+		<a href="http://semanticwp.net/jquery/social/">http://semanticwp.net/jquery/social/</a>
 	</p>
 	<!-- Документация - Конец -->
 
@@ -54,7 +50,7 @@
 				&lt;div class="g-plusone" /&gt;
 			</div>
 			<div class="preview">
-				<div class="g-plusone" data-href="http://arcticlab.ru/"></div>
+				<div class="g-plusone" data-href="http://semanticwp.net/"></div>
 			</div>
 		</div>
 		<div class="b-example">
@@ -62,7 +58,7 @@
 				&lt;g:plusone /&gt;
 			</div>
 			<div class="preview">
-				<g:plusone href="http://arcticlab.ru/"></g:plusone>
+				<g:plusone href="http://semanticwp.net/"></g:plusone>
 			</div>
 		</div>
 	</div>
@@ -77,7 +73,7 @@
 				&lt;div class="fb-like" /&gt;
 			</div>
 			<div class="preview">
-				<div class="fb-like" data-href="http://www.facebook.com/arcticlab" data-width="380"></div>
+				<div class="fb-like" data-href="https://www.facebook.com/sd.semantica" data-width="380"></div>
 			</div>
 		</div>
 		<div class="b-example">
@@ -85,7 +81,7 @@
 				&lt;fb:like /&gt;
 			</div>
 			<div class="preview">
-				<fb:like href="http://www.facebook.com/arcticlab" width="380"></fb:like>
+				<fb:like href="https://www.facebook.com/sd.semantica" width="380"></fb:like>
 			</div>
 		</div>
 	</div>
@@ -95,7 +91,7 @@
 				&lt;div class="fb-recommendations" /&gt;
 			</div>
 			<div class="preview">
-				<div class="fb-recommendations" data-site="http://arcticlab.ru/"></div>
+				<div class="fb-recommendations" data-site="http://semanticwp.net/"></div>
 			</div>
 		</div>
 		<div class="b-example">
@@ -103,7 +99,7 @@
 				&lt;fb:recommendations /&gt;
 			</div>
 			<div class="preview">
-				<fb:recommendations site="http://arcticlab.ru/"></fb:recommendations>
+				<fb:recommendations site="http://semanticwp.net/"></fb:recommendations>
 			</div>
 		</div>
 	</div>
@@ -119,8 +115,8 @@
 			</div>
 			<div class="preview">
 				<a href="https://twitter.com/share" class="twitter-share-button"
-				   data-url="http://arcticlab.ru/"
-				   data-text="Арктическая Лаборатория">Твитнуть</a>
+				   data-url="http://semanticwp.net/"
+				   data-text="SemanticWP">Твитнуть</a>
 			</div>
 		</div>
 		<div class="b-example">
@@ -128,7 +124,7 @@
 				&lt;a class="twitter-follow-button" /&gt;
 			</div>
 			<div class="preview">
-				<a href="https://twitter.com/arcticlab" class="twitter-follow-button">Читать @arcticlab</a>
+				<a href="https://twitter.com/predvoditelev" class="twitter-follow-button">Читать @predvoditelev</a>
 			</div>
 		</div>
 	</div>
@@ -146,7 +142,7 @@
 				<div class="vk-like"
 					 data-type="button"
 					 data-height="20"
-					 data-page-url="http://arcticlab.ru/"
+					 data-page-url="http://semanticwp.net/"
 					 data-verb="1"></div>
 			</div>
 		</div>
@@ -159,28 +155,26 @@
 					 data-width="288"
 					 data-height="230"
 					 data-mode="0"
-					 data-group-id="23839458"></div>
+					 data-group-id="35824409"></div>
 			</div>
 		</div>
 	</div>
 	<!-- ВКонтакте - Конец -->
 
 
-	<!-- Одноклассники & Мой мир -->
-	<h2>Одноклассники &amp; Мой мир</h2>
+	<!-- Одноклассники -->
+	<h2>Одноклассники</h2>
 	<div class="g-line">
 		<div class="b-example">
 			<div class="code">
-				&lt;a class="mrc__plugin_uber_like_button" /&gt;
+				&lt;div class="ok-share" /&gt;
 			</div>
 			<div class="preview">
-				<a target="_blank" class="mrc__plugin_uber_like_button"
-				   href="http://connect.mail.ru/share"
-				   data-mrc-config="{'cm' : '3', 'ck' : '1', 'sz' : '20', 'st' : '2', 'tp' : 'combo'}">Нравится</a>
+				<div class="ok-share"></div>
 			</div>
 		</div>
 	</div>
-	<!-- Одноклассники & Мой мир - Конец -->
+	<!-- Одноклассники - Конец -->
 
 
 </div>
