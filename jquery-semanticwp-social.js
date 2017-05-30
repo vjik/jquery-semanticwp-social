@@ -1,7 +1,7 @@
 /*
 
  jQuery SemanticWP Social — jQuery plugin for asynchronously loading widgets of social networks
- Version: 1.0.0
+ Version: 1.0.1
  Author: Sergey Predvoditelev (sergey.predvoditelev@gmail.com)
  Company: SemanticWP (http://semanticwp.net/)
 
@@ -23,7 +23,9 @@
 
 		// OK
 		ok_share_selector: '.ok-share',
-		ok_share_id: 'ok-share'
+		ok_share_id: 'ok-share',
+		ok_group_selector: '.ok-group',
+		ok_group_id: 'ok-group'
 
 	};
 
@@ -331,6 +333,35 @@
 		},
 
 
+		// group
+		groupsCounter: 0,
+		group: function(els) {
+			if (!els.length) return;
+			ok.load_sdk(function() {
+				els.each(function() {
+
+					// Предотвратить повторную инициализацию
+					if ($(this).data('init'))
+						return;
+
+					// ID
+					ok.groupsCounter++;
+					var id = options.ok_group_id + ok.groupsCounter;
+					$(this).attr('id', id);
+
+					// Config
+					var config = '{"width":250,"height":285}';
+					if ($(this).data('config') !== undefined)
+						config = $(this).data('config');
+
+					OK.CONNECT.insertGroupWidget(id, $(this).data('groupId'), config);
+					$(this).data('init', true);
+
+				});
+			});
+		},
+
+
 		// Инициализация
 		load_sdk: function(callback) {
 
@@ -396,6 +427,7 @@
 
 			// Одноклассники
 			ok.share($(options.ok_share_selector));
+			ok.group($(options.ok_group_selector));
 
 		},
 
